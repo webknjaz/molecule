@@ -300,6 +300,7 @@ addons:
     - lxd
     - lxd-client
     - vagrant
+    - virtualbox
 before_install:
 - gem install inspec rubocop
 - export TOXENV=$(echo $TOXENV_TMPL | envsubst)
