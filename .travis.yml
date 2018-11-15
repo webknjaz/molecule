@@ -309,3 +309,7 @@ install:
 - tox --notest
 script:
 - tox
+
+after_failure:
+- journalctl -xel
+- cat ~/*.log
