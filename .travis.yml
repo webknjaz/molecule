@@ -53,63 +53,75 @@ jobs:
   include:
   - <<: *lint
     name: linting the code
+    if: 1 != 1
     env:
       TOXENV: lint
 
   - <<: *lint
+    if: 1 != 1
     name: checking the code style
     env:
       TOXENV: format-check
 
   - <<: *lint
     name: checking the docs build
+    if: 1 != 1
     env:
       TOXENV: doc
 
   - <<: *py-37
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "27"
       TESTS_TYPE: unit
 
   - <<: *py-37
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "26"
       TESTS_TYPE: unit
 
   - <<: *py-37
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "25"
       TESTS_TYPE: unit
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "27"
       TESTS_TYPE: unit
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "26"
       TESTS_TYPE: unit
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "25"
       TESTS_TYPE: unit
 
   - <<: *py-27
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "27"
       TESTS_TYPE: unit
 
   - <<: *py-27
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "26"
       TESTS_TYPE: unit
 
   - <<: *py-27
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "25"
       TESTS_TYPE: unit
@@ -130,100 +142,118 @@ jobs:
       ANSIBLE_VERSION: "27"
 
   - <<: *py-37
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: "26"
 
   - <<: *py-37
+    if: 1 != 1
     env:
       <<: *env-functional-shard_2
       ANSIBLE_VERSION: "26"
 
   - <<: *py-37
+    if: 1 != 1
     env:
       <<: *env-functional-shard_3
       ANSIBLE_VERSION: "26"
 
   - <<: *py-37
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: "25"
 
   - <<: *py-37
+    if: 1 != 1
     env:
       <<: *env-functional-shard_2
       ANSIBLE_VERSION: "25"
 
   - <<: *py-37
+    if: 1 != 1
     env:
       <<: *env-functional-shard_3
       ANSIBLE_VERSION: "25"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: "27"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_2
       ANSIBLE_VERSION: "27"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_3
       ANSIBLE_VERSION: "27"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: "26"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_2
       ANSIBLE_VERSION: "26"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_3
       ANSIBLE_VERSION: "26"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: "25"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_2
       ANSIBLE_VERSION: "25"
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_3
       ANSIBLE_VERSION: "25"
 
   - <<: *py-27
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "27"
       TESTS_TYPE: functional
 
   - <<: *py-27
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "26"
       TESTS_TYPE: functional
 
   - <<: *py-27
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: "25"
       TESTS_TYPE: functional
@@ -234,63 +264,75 @@ jobs:
 
   - <<: *py-37
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: devel
       TESTS_TYPE: unit
   - <<: *py-37
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: devel
   - <<: *py-37
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_2
       ANSIBLE_VERSION: devel
   - <<: *py-37
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_3
       ANSIBLE_VERSION: devel
 
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: devel
       TESTS_TYPE: unit
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: devel
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_2
       ANSIBLE_VERSION: devel
   - <<: *py-36
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_3
       ANSIBLE_VERSION: devel
 
   - <<: *py-27
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       ANSIBLE_VERSION: devel
       TESTS_TYPE: unit
   - <<: *py-27
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: devel
   - <<: *py-27
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_1
       ANSIBLE_VERSION: devel
   - <<: *py-27
     <<: *if-cron-or-manual-run-or-tagged
+    if: 1 != 1
     env:
       <<: *env-functional-shard_3
       ANSIBLE_VERSION: devel
