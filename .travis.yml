@@ -301,7 +301,7 @@ jobs:
     stage: Deploy
     name: Publishing current Git tagged version of dist to PyPI
     if: repo == "ansible/molecule" AND tag IS present
-    env:
+    env: &deploy-env
       TOXENV: metadata-validation
     deploy: &deploy-step
       provider: pypi
@@ -317,6 +317,9 @@ jobs:
   - <<: *deploy-job
     if: repo == "ansible/molecule" AND type NOT IN (cron, pull_request)  # Always run, except if PR or cron
     name: Publishing current (unstable) Git revision of dist to Test PyPI
+    env:
+      <<: *deploy-env
+      PYPI_UPLOAD: true
     deploy:
       <<: *deploy-step
       server: https://test.pypi.org/legacy/
